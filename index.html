@@ -86,11 +86,6 @@
             50% { transform: rotate(5deg); }
         }
 
-        @keyframes sparkle {
-            0%, 100% { opacity: 0; transform: scale(0); }
-            50% { opacity: 1; transform: scale(1); }
-        }
-
         /* Floating Hearts Background */
         .hearts-container {
             position: fixed;
@@ -311,6 +306,53 @@
             color: var(--rose-deep);
             margin: 2rem 0;
             animation: heartbeat 2s ease-in-out infinite;
+        }
+
+        /* Dress Code Section - MINIMALISTA */
+        .dresscode-section {
+            padding: 4rem 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .dresscode-label {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--green-dark);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .dresscode-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            margin: 2rem 0;
+        }
+
+        .attire-icon {
+            width: 80px;
+            height: 100px;
+            opacity: 0.8;
+            transition: transform 0.3s ease;
+        }
+
+        .attire-icon:hover {
+            transform: translateY(-5px);
+        }
+
+        .dresscode-type {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--text-dark);
+            letter-spacing: 0.1em;
+            margin-top: 1rem;
         }
 
         /* Timeline Section */
@@ -835,6 +877,15 @@
                 width: 200px;
                 height: 160px;
             }
+
+            .dresscode-icons {
+                gap: 2rem;
+            }
+
+            .attire-icon {
+                width: 60px;
+                height: 75px;
+            }
         }
 
         /* Success message */
@@ -1006,6 +1057,28 @@
         <div class="heart-divider">❦ ❤ ❦</div>
     </section>
 
+    <!-- Dress Code Section - MINIMALISTA -->
+    <section class="dresscode-section">
+        <span class="dresscode-label">Dress Code</span>
+        
+        <div class="dresscode-icons">
+            <!-- Vestido minimalista -->
+            <svg class="attire-icon" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 10 Q30 5 40 10 L35 25 L40 75 Q30 80 20 75 L25 25 Z" fill="none" stroke="#d4a5a5" stroke-width="2"/>
+                <path d="M20 10 Q15 15 18 25 M40 10 Q45 15 42 25" fill="none" stroke="#d4a5a5" stroke-width="1.5"/>
+            </svg>
+            
+            <!-- Traje minimalista -->
+            <svg class="attire-icon" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 15 L10 75 L50 75 L45 15 Q30 20 15 15" fill="none" stroke="#4a4a4a" stroke-width="2"/>
+                <path d="M25 15 L30 40 L35 15" fill="none" stroke="#4a4a4a" stroke-width="1.5"/>
+                <path d="M20 25 L15 75 M40 25 L45 75" fill="none" stroke="#4a4a4a" stroke-width="1"/>
+            </svg>
+        </div>
+        
+        <h2 class="dresscode-type">Formal / Semi-formal</h2>
+    </section>
+
     <!-- Timeline Section -->
     <section class="timeline">
         <h2 class="section-title">Programación</h2>
@@ -1057,7 +1130,7 @@
             <div class="price-card">
                 <div class="age-range">4 a 10 años</div>
                 <div class="price-amount">$14.000</div>
-
+                <div class="price-note">Por persona</div>
             </div>
         </div>
     </section>
