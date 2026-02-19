@@ -1224,7 +1224,7 @@
         function handleCash() {
             if (!getGuestName()) return;
             
-            const message = `¡Hola! Soy ${currentGuestName}. Confirmo mi asistencia a la boda de Abigail y Nicolás. Abonaré en efectivo el día del evento. ¡Gracias!`;
+            const message = `¡Hola! Soy ${currentGuestName}. Confirmo mi asistencia a la boda de Abigail y Nicolás. Abonaré en efectivo. ¡Gracias!`;
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             
             window.open(whatsappUrl, '_blank');
